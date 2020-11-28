@@ -1,5 +1,5 @@
 
-# Welcome to your CDK Python project!
+# Infrastructure as code using AWS CDK
 
 This is a blank project for Python development with CDK.
 
