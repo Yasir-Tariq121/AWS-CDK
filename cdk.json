@@ -1,0 +1,26 @@
+{
+  "app": "python3 app.py",
+  "context": {
+    "@aws-cdk/core:enableStackNameDuplicates": "true",
+    "aws-cdk:enableDiffNoFail": "true",
+    "@aws-cdk/core:stackRelativeExports": "true",
+    "@aws-cdk/aws-ecr-assets:dockerIgnoreSupport": true,
+    "VPC": {
+      "cidr":"10.0.0.0/16",
+      "max_azs":2,
+      "nat_gateways":0,
+      "cidr_mask":24,
+      "ingress_rule_sg": "0.0.0.0/0",
+      "tcp_port":80
+    },
+    "IAM": {
+      "principal":"ec2.amazonaws.com",
+      "actions": ["s3:*"]
+    },
+    "EC2": {
+      "instance_type":"t3.nano",
+      "key_name": "yasir-KP-virginia"
+    }
+
+  }
+}
